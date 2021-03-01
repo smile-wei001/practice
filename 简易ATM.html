@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var money = 100;
+        do {
+            var cz = parseInt(prompt('请输入您要的操作：\n 1、存钱\n 2、取钱\n 3、显示余额\n 4、退出'));
+            if (cz < 4) {
+                switch (cz) {
+                    case 1:
+                        var cq = parseInt(prompt('请输入您要存的钱数'));
+                        money += cq;
+                        break;
+                    case 2:
+                        var qq = parseInt(prompt('请输入您要取的钱数'));
+                        money -= qq;
+                        break;
+                    case 3:
+                        break;
+                }
+                alert('您的账户余额为' + money + '元');
+            }
+        } while (cz < 4)
+        alert('您现在正在退出!!!');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
