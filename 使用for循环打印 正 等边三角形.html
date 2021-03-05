@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var rows = prompt('请您输入需要打印的三角形行数：');
+        var str = '';
+        for (var i = 1; i <= rows; i++) {
+            // 用空格补足位置，使得每次 * 输入在合适位置。补足的代码，参考下方注释的代码
+            for (var j = rows - i; j >= 1; j--) {
+                str += ' ';
+            }
+            for (var z = 1; z <= 2 * i - 1; z++) {
+                str += '*';
+            }
+            str += '\n';
+        }
+        console.log(str);
+        /*   var rows = prompt('请您输入需要打印的三角形行数：')
+          var str = '';
+          for (var i = 0; i <= rows; i++) {
+              for (var j = rows - i; j >= 1; j--) {
+                  str += '*';
+              }
+              str += '\n';
+          }
+          console.log(str); */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1、利用  charAt 遍历这个字符串
+        // 2、把每一个字符都存储给对象，如果该对象存在了该属性，就+1；没有该属性，就为1。
+        // 3、遍历对象，得到最大值和该字符。
+        var str = 'afjdslakjfopoaefjkdlj';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            // 利用 charAt 遍历这个字符串
+            var chars = str.charAt(i); //chars 是字符串中的每一个字符
+            // 利用 对象['属性名'] 的方法，判断是否有该属性
+            if (o[chars]) {
+                o[chars]++;
+            } else {
+                o[chars] = 1;
+            }
+        }
+        console.log(o);
+        //遍历对象，访问对象中所有属性
+        var max = 0;
+        var ch = '';
+        // 默认使用var k，其原理与 for 循环中 使用var i 相同
+        for (var k in o) {
+            // k 表示遍历到的属性名称
+            // 对象名[k] 表示遍历到的属性值
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('最大的字符是' + ch);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

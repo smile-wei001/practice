@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'daljalfeiofvnfal';
+        var o = {};
+        // 1、利用  charAt 遍历这个字符串
+        for (var i = 1; i < str.length; i++) {
+            var chars = str.charAt(i);
+            // 2、把每一个字符都存储给对象，如果该对象存在了该属性，再存入即为重复，故输出此字符，并结束循环。
+            if (o[chars]) {
+                console.log('第一个重复的字符是' + chars);
+                break;
+            } else {
+                o[chars] = 1;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'afjdfaaslakjfaehioaes';
+        var o = {};
+        // 1、利用  charAt 遍历这个字符串
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            // 2、把每一个字符都存储给对象，如果该对象存在了该属性，就+1；没有该属性，就为1。
+            if (o[chars]) {
+                o[chars]++
+            } else {
+                o[chars] = 1
+            }
+        }
+        console.log(o);
+        // 3、遍历对象，如果属性值为1，证明这是不重复的字符，将第一个取出，并结束循环。
+        for (k in o) {
+            if (o[k] == 1) {
+                console.log(k);
+                break;
+
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

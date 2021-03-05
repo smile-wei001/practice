@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = prompt('请您输入需要判断的数：');
+        var istrue = true;
+        var cs = 0;
+
+        function qz(num) {
+            if (num < 1) {
+                istrue = false;
+            } else {
+                for (var i = 1; i <= num; i++) {
+                    // 判断余数，如果余数是零，被整除的cs加1
+                    if (num % i == 0) {
+                        cs++;
+                    }
+                    // 当其被整除的次数超过2时，也就是说明 该数  除了被1和其本身整除 外 还可以被其他数整除
+                    // 修改 istrue 的值
+                    if (cs > 2) {
+                        istrue = false;
+                        break;
+                    }
+                }
+            }
+            // 根据istrue中的值显示是否为质数
+            if (istrue == true) {
+                alert(num + '是质数');
+            } else {
+                alert(num + '不是质数');
+            }
+
+        }
+        // 调用函数
+        qz(num);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
